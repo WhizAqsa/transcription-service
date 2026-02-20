@@ -7,8 +7,11 @@ from app.worker import transcribe_task
 
 Base.metadata.create_all(bind=engine)
 
+# init FastAPI app
 app = FastAPI()
 
+
+# upload directory
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
